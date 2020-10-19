@@ -48,11 +48,15 @@ let x = 0, y = 0;
 
 document.addEventListener('keydown', function(ev){
     
+    //курсор <
     if(ev.keyCode == 37) y -= 5;
+    //курсор >
     if(ev.keyCode == 39) y += 5;
+    //курсор ^
     if(ev.keyCode == 38) x += 5;
+    //курсор V
     if(ev.keyCode == 40) x -= 5;
  
- document.querySelector('.cube').style.transform = `rotateY(${y}deg) rotateX(${x}deg)`;
+ document.querySelector('.cube').style.transform = `rotateX(${x}deg) rotateY(${y}deg)`;
 
 });
